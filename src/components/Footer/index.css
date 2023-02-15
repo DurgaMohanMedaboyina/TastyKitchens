@@ -1,0 +1,29 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  color: #ffffff;
+  width: 60%;
+  height: 30%;
+  background: #0f172a;
+  margin: 15%;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.Icon {
+  color: #ffffff;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+}
+
+.IconsContainer {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  flex-wrap: wrap;
+  width: 300px;
+}

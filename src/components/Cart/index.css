@@ -1,0 +1,100 @@
+.OrderedFoodItem {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border-radius: 15px;
+  transition: transform 0.2s;
+}
+
+.OrderedFoodItem:hover {
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 768px) {
+  .OrderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    flex-wrap: wrap;
+  }
+
+  .titleHeadersContainer {
+    display: none;
+  }
+
+  .TotalOrder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .OrderContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+  }
+
+  .titleHeadersContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+    padding-left: 100px;
+  }
+
+  .header {
+    font-size: 16px;
+  }
+
+  .TotalOrder {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 700px;
+  }
+}
+
+.CartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.quantityChangebutton {
+  border-color: black;
+  color: white;
+  background-color: none;
+}
+
+.button {
+  width: 150px;
+  color: white;
+}
+
+.ViewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  flex-wrap: wrap;
+}

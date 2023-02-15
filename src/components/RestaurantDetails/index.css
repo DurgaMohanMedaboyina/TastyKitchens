@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px) {
+  .FoodItemDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 15px;
+    width: 500px;
+    list-style-type: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .FoodItemDetails {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width: 1400px;
+    list-style-type: none;
+  }
+}

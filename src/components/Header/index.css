@@ -1,0 +1,103 @@
+.chefhat {
+  width: 53px;
+  height: 43px;
+  left: 366px;
+  top: 279px;
+}
+
+.tastyKitchen {
+  height: 32px;
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #f7931e;
+}
+
+.tastyKitchensTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+  .titleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .logOutButtonContainer {
+    display: none;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 400px;
+  }
+
+  .smallContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 300px;
+    flex-wrap: wrap;
+  }
+
+  .Button {
+    color: #ffffff;
+    background: #f7931e;
+    border-radius: 8px;
+    border-style: none;
+    height: 20px;
+    width: 50px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .titleContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .logOutButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 700px;
+  }
+  .menuIcon {
+    display: none;
+  }
+  .smallContainer {
+    display: none;
+  }
+
+  .Button {
+    color: #ffffff;
+    background: #f7931e;
+    border-radius: 8px;
+    border-style: none;
+    height: 40px;
+    width: 100px;
+  }
+}
+
+.Link {
+  text-decoration: none;
+}
+
+.HomeTitle {
+  color: #f7931e;
+}

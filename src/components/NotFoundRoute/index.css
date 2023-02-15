@@ -1,0 +1,24 @@
+.homePageButton {
+  padding: 12px 24px;
+  gap: 8px;
+  width: 123px;
+  height: 48px;
+  background: #f7931e;
+  color: #ffffff;
+  border: none 12px;
+}
+
+.NotFoundContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 250px;
+  padding: 250px;
+}
+
+.NotFoundImage {
+  height: 250px;
+  width: 250px;
+}

@@ -1,0 +1,114 @@
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 456px;
+  height: 561px;
+  left: 165px;
+  top: 231px;
+  box-shadow: 0px 8px 40px rgba(7, 7, 7, 0.08);
+  border-radius: 8px;
+  margin-left: 160px;
+  margin-top: 150px;
+  margin-bottom: 140px;
+  margin-right: 114px;
+  padding: 25px;
+  background-color: #e5e5e5;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chefhatImage {
+  width: 53px;
+  height: 43px;
+  left: 366px;
+  top: 279px;
+}
+
+.tastyKitchenHeading {
+  height: 32px;
+  font-family: 'DM Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #f7931e;
+}
+
+.inputElement {
+  height: 40px;
+  left: 0%;
+  right: 0%;
+  top: 24px;
+  background: #e2e8f0;
+  border-color: #f7931e;
+  border-style: solid;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.label {
+  width: 66px;
+  height: 16px;
+  left: 0px;
+  top: 0px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #475569;
+}
+
+@media screen and (max-width: 767px) {
+  .wrapUpContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 0px;
+  }
+
+  .displayImage {
+    display: none;
+  }
+
+  .smallImage {
+    width: 150px;
+    height: 150px;
+    left: 56px;
+    top: -38px;
+  }
+}
+
+.loginButton {
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  color: #ffffff;
+  background: #f7931e;
+  border-radius: 8px;
+  border-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapUpContainer {
+    display: flex;
+  }
+
+  .displayImage {
+    width: 705px;
+    height: 1024px;
+    left: 735px;
+    top: 0px;
+  }
+  .smallImage {
+    display: none;
+  }
+}
