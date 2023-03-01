@@ -8,6 +8,18 @@
     width: 500px;
     list-style-type: none;
   }
+
+  .restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 15px;
+    margin: 20px;
+    width: 500px;
+    background: #333333;
+    color: #ffffff;
+    border-radius: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -21,4 +33,29 @@
     width: 1400px;
     list-style-type: none;
   }
+
+  .restaurant {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 20px;
+    width: 1400px;
+    background: #333333;
+    color: #ffffff;
+    border-radius: 15px;
+  }
+}
+
+.restaurantImage {
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.displaydetails {
+  display: flex;
+  flex-direction: column;
 }

@@ -13,7 +13,7 @@ const App = () => (
     <ProtectedRoute exact path="/" component={HomeRoute} />
     <ProtectedRoute
       exact
-      path="/restaurants/:id"
+      path="/restaurant/:id"
       component={RestaurantDetails}
     />
     <ProtectedRoute exact path="/cart" component={Cart} />

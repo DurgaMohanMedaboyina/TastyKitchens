@@ -25,7 +25,7 @@ class HomeRoute extends Component {
     search: '',
     pgNumber: 1,
     total: 0,
-    order: Filters[1],
+    order: Filters[0],
     slider: LoadingConstants.ip,
     details: LoadingConstants.in,
     restaurantsData: [],
@@ -85,25 +85,19 @@ class HomeRoute extends Component {
         this.setState({total: pages})
       }
       this.setState({restaurantsData})
+    } else {
+      this.setState({details: LoadingConstants.fa})
     }
   }
 
-  /*
-  testid="restaurants-offers-loader"
-  */
-
   OffersLoading = () => (
-    <div>
+    <div testid="restaurants-offers-loader">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
   )
 
-  /*
-  testid="restaurants-details-loader"
-  */
-
   RestaurantsLoading = () => (
-    <div testid="restaurants-offers-loader">
+    <div testid="restaurants-details-loader">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
   )
@@ -113,7 +107,6 @@ class HomeRoute extends Component {
   }
 
   renderFilter = event => {
-    console.log(event.target.value)
     this.setState({order: event.target.value}, this.renderRestaurantDetails)
   }
 
@@ -121,6 +114,11 @@ class HomeRoute extends Component {
     const {restaurantsData, search, order} = this.state
     return (
       <div className="restaurants">
+        <h1>Popular Restaurants</h1>
+        <p>
+          Select Your favourite restaurant special dish and make your day
+          happy...
+        </p>
         <div className="searchContainer">
           <div>
             <input
@@ -133,13 +131,9 @@ class HomeRoute extends Component {
               <AiOutlineSearch />
             </button>
           </div>
-          <div>
-            <h1>Popular Restaurants</h1>
-            <p>
-              Select Your favourite restaurant special dish and make your day
-              happy...
-            </p>
+          <div className="sortFilter">
             <BsFilterLeft className="FilterIcon" />
+            <p>Sort By</p>
             <select onChange={this.renderFilter} value={order}>
               {Filters.map(each => (
                 <option value={each}>{each}</option>
@@ -147,19 +141,54 @@ class HomeRoute extends Component {
             </select>
           </div>
         </div>
-        <div className="restaurantDetails" testid="restaurants-list-loader">
+        <ul className="restaurantDetails" testid="restaurants-list-loader">
           {restaurantsData.map(each => (
             <HotelIcon details={each} key={each.id} />
           ))}
-        </div>
+        </ul>
         {this.renderPageDetails()}
+      </div>
+    )
+  }
+
+  noResults = () => {
+    const {search, order} = this.state
+    return (
+      <div className="restaurants">
+        <h1>Popular Restaurants</h1>
+        <p>
+          Select Your favourite restaurant special dish and make your day
+          happy...
+        </p>
+        <div className="searchContainer">
+          <div>
+            <input
+              type="search"
+              onChange={this.recordInput}
+              placeholder="Search"
+              value={search}
+            />
+            <button onClick={this.renderRestaurantDetails} type="button">
+              <AiOutlineSearch />
+            </button>
+          </div>
+          <div className="sortFilter">
+            <BsFilterLeft className="FilterIcon" />
+            <p>Sort By</p>
+            <select onChange={this.renderFilter} value={order}>
+              {Filters.map(each => (
+                <option value={each}>{each}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+        <p>No Restaurants Found...!</p>
       </div>
     )
   }
 
   displayOffers = () => {
     const {carouselData} = this.state
-    console.log(carouselData)
     return (
       <div>
         <Slider dots>
@@ -240,6 +269,8 @@ class HomeRoute extends Component {
         return this.RestaurantsLoading()
       case LoadingConstants.su:
         return this.displayRestaurants()
+      case LoadingConstants.fa:
+        return this.noResults()
       default:
         return null
     }

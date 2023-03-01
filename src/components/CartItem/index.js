@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {BiRupee} from 'react-icons/bi'
 import './index.css'
 
 class CartItem extends Component {
@@ -25,7 +26,7 @@ class CartItem extends Component {
 
   decrementQuantity = () => {
     const {quantity} = this.state
-    if (quantity > 1) {
+    if (quantity > 0) {
       this.setState(
         prevState => ({
           quantity: prevState.quantity - 1,
@@ -53,10 +54,10 @@ class CartItem extends Component {
     const {details} = this.props
     const {imageUrl, name, cost, quantity} = details
     return (
-      <>
-        <div testid="cartItem">
+      <li testid="cartItem" className="OrderContainer">
+        <div>
           <img src={imageUrl} alt={name} className="FoodItem" />
-          <p>{name}</p>
+          <h1 className="dishname">{name}</h1>
         </div>
         <div className="DetailsContainer">
           <div className="buttonContainer">
@@ -77,8 +78,10 @@ class CartItem extends Component {
             </button>
           </div>
         </div>
-        <p testid="total-price">{cost}</p>
-      </>
+        <p className="dishname">
+          <BiRupee /> {cost}
+        </p>
+      </li>
     )
   }
 }

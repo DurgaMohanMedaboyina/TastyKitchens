@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {BiRupee, BiStar} from 'react-icons/bi'
 import './index.css'
 
 class FoodItem extends Component {
@@ -19,12 +20,14 @@ class FoodItem extends Component {
         prevState => ({quantity: prevState.quantity - 1}),
         this.addit,
       )
+    } else {
+      this.setState({addbutton: false}, this.removeIt)
     }
   }
 
-  addit = () => {
-    const {details, addItem} = this.props
-    const {imgUrl, name, id, cost} = details
+  removeIt = () => {
+    const {details, removeItem} = this.props
+    const {imgUrl, name, id, cost, rating} = details
     const {quantity} = this.state
     const foodItem = {
       imageUrl: imgUrl,
@@ -32,6 +35,22 @@ class FoodItem extends Component {
       quantity,
       id,
       cost,
+      rating,
+    }
+    removeItem(foodItem)
+  }
+
+  addit = () => {
+    const {details, addItem} = this.props
+    const {imgUrl, name, id, cost, rating} = details
+    const {quantity} = this.state
+    const foodItem = {
+      imageUrl: imgUrl,
+      name,
+      quantity,
+      id,
+      cost,
+      rating,
     }
     addItem(foodItem)
   }
@@ -39,12 +58,19 @@ class FoodItem extends Component {
   render() {
     const {addbutton, quantity} = this.state
     const {details} = this.props
-    const {imgUrl, name} = details
+    const {imgUrl, name, cost, rating} = details
     return (
       <li className="FoodItemContainer" testid="foodItem">
         <img src={imgUrl} alt={name} className="FoodItem" />
         <div className="DetailsContainer">
-          <p>{name}</p>
+          <h1 className="ItemName">{name}</h1>
+          <p>
+            <BiRupee /> {cost}
+          </p>
+          <p>
+            <BiStar />
+            {rating}
+          </p>
           {addbutton ? (
             <div className="buttonContainer">
               <button

@@ -11,13 +11,9 @@
 }
 
 @media screen and (max-width: 768px) {
-  .OrderContainer {
+  .cartContainer {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 200px;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .titleHeadersContainer {
@@ -51,16 +47,26 @@
   }
 
   .header {
-    font-size: 16px;
+    font-size:20px;
   }
 
   .TotalOrder {
-    margin: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 700px;
   }
+}
+
+.totalPrice {
+  font-size: 20px;
+  font-weight: bold;
+  height: 40px;
+  width: 100px;
+  background-color: #17b169;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
 }
 
 .CartContainer {

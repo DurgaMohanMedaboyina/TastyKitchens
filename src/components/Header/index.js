@@ -26,7 +26,7 @@ class Header extends Component {
     const {display} = this.state
     return (
       <nav className="titleContainer">
-        <div className="tastyKitchensTitle">
+        <ul className="tastyKitchensTitle">
           <Link to="/" className="Link">
             <img
               src="https://res.cloudinary.com/dppqkea7f/image/upload/v1625742512/Frame_274_zlrzwk.svg"
@@ -36,9 +36,9 @@ class Header extends Component {
           </Link>
           <h1 className="tastyKitchen">Tasty Kitchens</h1>
           <GiHamburgerMenu onClick={this.showMenu} className="menuIcon" />
-        </div>
+        </ul>
         {display && (
-          <div className="smallContainer">
+          <ul className="smallContainer">
             <Link to="/" className="Link">
               <h1 className="HomeTitle">Home</h1>
             </Link>
@@ -53,9 +53,9 @@ class Header extends Component {
               Logout
             </button>
             <AiFillCloseCircle onClick={this.closeMenu} />
-          </div>
+          </ul>
         )}
-        <div className="logOutButtonContainer">
+        <ul className="logOutButtonContainer">
           <Link to="/" className="Link">
             <h1 className="HomeTitle">Home</h1>
           </Link>
@@ -65,7 +65,7 @@ class Header extends Component {
           <button onClick={this.removeLogout} type="button" className="Button">
             Logout
           </button>
-        </div>
+        </ul>
       </nav>
     )
   }

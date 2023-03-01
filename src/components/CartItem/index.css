@@ -9,10 +9,15 @@
   transform: scale(1.5);
 }
 
+.dishname {
+  font-size: 18px;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 768px) {
-  .FoodItemContainer {
+  .OrderContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     width: 500px;
     margin: 20px;

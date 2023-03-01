@@ -12,6 +12,7 @@
     height: 150px;
     width: 150px;
     margin: 10px;
+    border-radius:15px;
     transition: transform 0.2s;
   }
 

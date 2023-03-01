@@ -1,6 +1,8 @@
 import {Component} from 'react'
 import Cookies from 'js-cookie'
+/*
 import {Redirect} from 'react-router-dom'
+*/
 import './index.css'
 
 /*
@@ -61,8 +63,9 @@ class LoginRoute extends Component {
 
   render() {
     const jwtToken = Cookies.get('jwt_token')
+    const {history} = this.props
     if (jwtToken !== undefined) {
-      return <Redirect to="/" />
+      history.replace('/')
     }
 
     const {username, password, showErrorMsg, errorMsg} = this.state
@@ -71,12 +74,12 @@ class LoginRoute extends Component {
       <div className="wrapUpContainer">
         <div className="loginBackgroundContainer">
           <div className="loginFormContainer">
-            <img src={logoUrl} alt="website logo" className="chefhatImage" />
+            <img src={logoUrl} alt="website login" className="chefhatImage" />
             <h1 className="tastyKitchenHeading">Tasty Kitchens</h1>
             <img
               className="smallImage"
               src="https://res.cloudinary.com/ddgvegjgk/image/upload/v1635311318/tastykitchens/Rectangle_1457_ri10vf.png"
-              alt="website login"
+              alt="food"
             />
             <h1>Login</h1>
             <form className="formContainer" onSubmit={this.onSubmitForm}>
