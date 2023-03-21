@@ -10,7 +10,7 @@ User Enters username and password. If correct, navigates to Home Route with the 
 
 The moment home route is rendered, offer details and restaurant details are fetched making API call. While the API Call is in progress, Loader view is displayed. Once the api request is successful, data gets displayed.
 
-Pagination and search filter are available in the home page. We can select a restaurant and add the items by clicking on the add button available next to each item. The moment add button is clicked, 1 qty gets added by default. Increment/decrement can be done using Plus/Minus button.
+Pagination/search & sort filter are available in the home page. We can select a restaurant and add the items by clicking on the add button available next to each item. The moment add button is clicked, 1 qty gets added by default. Increment/decrement can be done using Plus/Minus button.
 
 Incase no item is added in cart, default view appears in cart component with a button "Order Now".
 
